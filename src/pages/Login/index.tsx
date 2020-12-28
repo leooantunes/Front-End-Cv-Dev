@@ -1,39 +1,40 @@
 import React from "react";
-import { Button, Form } from "react-bootstrap";
-import { useAuth } from "../../contexts/auth";
 import {
-  ContainerPaginaLogin,
-  ContainerConteudoLogin,
-  ImagemLogin,
-  FormLogin,
+  LoginContainer,
+  SignIn,
+  SignUp,
+  InputSignUp,
+  ButtonSignUp
 } from "./styles";
 
-const Login: React.FC = () => {
-  const { signIn } = useAuth();
-  return (
-    <ContainerPaginaLogin>
-      <ContainerConteudoLogin>
-        <ImagemLogin />
-        <FormLogin>
-          <Form.Group controlId="formBasicEmail">
-            <Form.Label>CPF:</Form.Label>
-            <Form.Control type="email" placeholder="Informe seu CPF" />
-            <Form.Text className="text-muted">Login </Form.Text>
-          </Form.Group>
+import {ButtonLogin, Input} from '../../components/common/Styled/PaginaPadrao';
 
-          <Form.Group controlId="formBasicPassword">
-            <Form.Label>Senha</Form.Label>
-            <Form.Control type="password" placeholder="Senha" />
-          </Form.Group>
-          <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
-          </Form.Group>
-          <Button variant="primary" type="submit">
-            Entrar
-          </Button>
-        </FormLogin>
-      </ContainerConteudoLogin>
-    </ContainerPaginaLogin>
+const Login: React.FC = () => {
+  return (
+    <LoginContainer>
+      <SignIn>
+        <h1>Seja Bem Vindo(a)</h1>
+        <div className="input-btn">
+          <label htmlFor="usuario">Usuário</label>
+          <Input placeholder="Digite seu usuário" id="usuario"/>
+          <label htmlFor="password">Senha</label>
+          <Input placeholder="Digite sua senha" id="password"/>
+        </div>
+        <ButtonLogin>ENTRAR</ButtonLogin>
+      </SignIn>
+      <SignUp>
+      <h1>Ainda não possui uma conta? <br/> Cadastre-se agora mesmo =)</h1>
+        <div className="input-btn">
+          <label htmlFor="usuario">Usuário</label>
+          <InputSignUp type="text" placeholder="Digite seu usuário" id="usuario"/>
+          <label htmlFor="senha">Senha</label>
+          <InputSignUp type="password" placeholder="Digite sua senha" id="senha"/>
+          <label htmlFor="email">Email</label>
+          <InputSignUp type="email" placeholder="Digite seu email" id="email"/>
+        </div>
+        <ButtonSignUp>CADASTRAR</ButtonSignUp>
+      </SignUp>
+    </LoginContainer>
   );
 };
 
