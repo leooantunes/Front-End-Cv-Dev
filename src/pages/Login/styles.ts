@@ -22,6 +22,7 @@ export const SignIn = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 3px;
     h1{
         color: #ffffff;
         margin-bottom: 2rem;
@@ -36,6 +37,7 @@ export const SignIn = styled.div`
     label{
         color: #ffffff;  
         margin-bottom: 1rem;  
+        font-weight: bold;
     }
 `
 export const SignUp = styled.div`
@@ -45,6 +47,7 @@ export const SignUp = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 3px;
     .input-btn{
         display: flex;
         flex-direction: column;
@@ -55,6 +58,7 @@ export const SignUp = styled.div`
     label{
         color: #240b36;  
         margin-bottom: 1rem;  
+        font-weight: bold;
     }
     h1{
         color: #240b36;
@@ -68,7 +72,20 @@ export const InputSignUp = styled(Input)`
             color: #240b36;
         } 
         :focus{
-            border-bottom: 3px solid #240b36;
+            border: 2px solid #240b36;
+            padding: 1rem;
+        }
+`
+
+export const InputSignIn = styled(Input)`
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+    ::placeholder {
+            color: #ffffff;
+        } 
+        :focus{
+            border: 2px solid #ffffff;
+            padding: 1rem;
         }
 `
 
@@ -79,6 +96,6 @@ export const ButtonSignUp = styled(ButtonLogin)`
             background-color: #240b36;
             border: 3px solid #c31432;
             color: #ffffff;
-            transition: 1s ease-in-out;
+            transition: 0.3s ease-in-out;
         }
 `

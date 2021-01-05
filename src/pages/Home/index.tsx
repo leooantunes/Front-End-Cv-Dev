@@ -3,9 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import {Navbar,Main,ContainerSkills,ContainerUser,InfoSkills,InfoUser,ExperienciaUser} from './style';
 import {ButtonNavbar} from '../../components/common/Styled/PaginaPadrao';
-import { faCode, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faHome, faEdit } from '@fortawesome/free-solid-svg-icons';
 import {faGithub, faLinkedin, faNpm, faCss3, faHtml5, faJs, faReact, faMedium} from '@fortawesome/free-brands-svg-icons';
 import Avatar from '../../content/images/png/pinkfloyd.png';
+import Modal from "../../components/Modal";
 
 const Home: React.FC = () => {
   return (<>
@@ -19,10 +20,11 @@ const Home: React.FC = () => {
       </div>
     </Navbar>
     <Main>
+    <Modal/>
       <ContainerUser>
         <img src={Avatar} alt="avatar-user"/>
         <ul className="info-user">
-          <li>Nome: Leonardo Antunes</li>
+          <li>Nome: Leonardo Antunes <FontAwesomeIcon icon={faEdit} className="icon-edit"/></li>
           <li>Idade: 25 Anos</li>
           <li>Cargo: Desenvolvedor Front-End</li>
         </ul>
@@ -35,7 +37,7 @@ const Home: React.FC = () => {
       </ContainerUser>
       <ContainerSkills>
         <InfoUser>
-          <h1>Sobre Mim</h1>
+          <h1>Sobre Mim <FontAwesomeIcon icon={faEdit} className="icon-edit"/></h1>
           <p>Lorem Ipsum is simply dummy 
             text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -46,7 +48,7 @@ const Home: React.FC = () => {
             like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </InfoUser>
         <InfoSkills>
-          <h1>Minhas Skills</h1>
+          <h1>Minhas Skills <FontAwesomeIcon icon={faEdit} className="icon-edit"/></h1>
           <div className="skill">
             <h3><FontAwesomeIcon icon={faCss3}/>CSS3</h3>
             <div className="skill-progress">
@@ -73,7 +75,7 @@ const Home: React.FC = () => {
           </div>
         </InfoSkills>
         <ExperienciaUser>
-          <h1>Minhas Experiêcias</h1>
+          <h1>Minhas Experiêcias <FontAwesomeIcon icon={faEdit} className="icon-edit"/></h1>
           <div className="work-local">
             <h3><FontAwesomeIcon icon={faHome}/> Protech Solution</h3>
             <h3>Fevereiro 2020 - Atualmente</h3>

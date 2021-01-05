@@ -4,10 +4,11 @@ import {
   SignIn,
   SignUp,
   InputSignUp,
+  InputSignIn,
   ButtonSignUp
 } from "./styles";
 
-import {ButtonLogin, Input} from '../../components/common/Styled/PaginaPadrao';
+import {ButtonLogin} from '../../components/common/Styled/PaginaPadrao';
 
 const Login: React.FC = () => {
   return (
@@ -16,9 +17,9 @@ const Login: React.FC = () => {
         <h1>Seja Bem Vindo(a)</h1>
         <div className="input-btn">
           <label htmlFor="usuario">Usuário</label>
-          <Input placeholder="Digite seu usuário" id="usuario"/>
+          <InputSignIn placeholder="Digite seu usuário" id="usuario" autoComplete="false"/>
           <label htmlFor="password">Senha</label>
-          <Input placeholder="Digite sua senha" id="password"/>
+          <InputSignIn placeholder="Digite sua senha" id="password" autoComplete="false"/>
         </div>
         <ButtonLogin>ENTRAR</ButtonLogin>
       </SignIn>
@@ -26,11 +27,11 @@ const Login: React.FC = () => {
       <h1>Ainda não possui uma conta? <br/> Cadastre-se agora mesmo =)</h1>
         <div className="input-btn">
           <label htmlFor="usuario">Usuário</label>
-          <InputSignUp type="text" placeholder="Digite seu usuário" id="usuario"/>
+          <InputSignUp type="text" placeholder="Digite seu usuário" id="usuario" autoComplete="false"/>
           <label htmlFor="senha">Senha</label>
-          <InputSignUp type="password" placeholder="Digite sua senha" id="senha"/>
+          <InputSignUp type="password" placeholder="Digite sua senha" id="senha" autoComplete="false"/>
           <label htmlFor="email">Email</label>
-          <InputSignUp type="email" placeholder="Digite seu email" id="email"/>
+          <InputSignUp type="email" placeholder="Digite seu email" id="email" autoComplete="false"/>
         </div>
         <ButtonSignUp>CADASTRAR</ButtonSignUp>
       </SignUp>

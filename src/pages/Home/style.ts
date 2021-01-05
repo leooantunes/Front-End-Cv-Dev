@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Navbar = styled.div`
     background: linear-gradient(to left, #c31432, #240b36);
     padding: 1rem;
+    position: relative;
 
     @media only screen and (min-width: 360px) and (max-width: 600px){
         .container-navbar {
@@ -57,6 +58,14 @@ export const Main = styled.main`
     justify-content: space-between;
     align-items: center;
     color: #ffffff;
+    h1{
+        display: flex;
+        align-items: center;
+    }
+    .icon-edit{
+        margin-left: 1rem !important;
+        width: 1.3rem !important;
+        height: 1.3rem !important;
     @media only screen and (min-width: 360px) and (max-width: 600px){
         flex-direction: column !important;
     }
